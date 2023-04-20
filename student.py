@@ -60,7 +60,7 @@ class Piggy(PiggyParent):
       print("This is for testing")
       print("This is a second line")
       self.fwd()
-      time.sleep(2)
+      time.sleep(100)
       self.stop()
       
     def dance(self):

@@ -59,6 +59,9 @@ class Piggy(PiggyParent):
     def alex(self):
       print("This is for testing")
       print("This is a second line")
+      self.right(primary=50, counter=50)
+      time.sleep(2)
+      self.stop()
       
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""

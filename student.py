@@ -59,7 +59,7 @@ class Piggy(PiggyParent):
     def alex(self):
       print("This is for testing")
       print("This is a second line")
-      self.right(primary=500, counter=500)
+      self.fwd()
       time.sleep(2)
       self.stop()
       

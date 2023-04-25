@@ -57,9 +57,13 @@ class Piggy(PiggyParent):
     ****************
     '''
     def alex(self):
-      self.fwd()
-      time.sleep(2)
-      self.stop()
+      for x in range(4):
+        self.fwd()
+        time.sleep(2)
+        self.stop()
+        self.right()
+        time.sleep(2)
+        self.stop()
       
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""

@@ -17,9 +17,9 @@ class Piggy(PiggyParent):
         ''' 
         MAGIC NUMBERS <-- where we hard-code our settings
         '''
-        self.LEFT_DEFAULT = 80
-        self.RIGHT_DEFAULT = 80
-        self.MIDPOINT = 1500  # what servo command (1000-2000) is straight forward for your bot?
+        self.LEFT_SPEED = 80
+        self.RIGHT_SPEED = 80
+        self.MIDPOINT = 1625  # what servo command (1000-2000) is straight forward for your bot?
         self.set_motor_power(self.MOTOR_LEFT + self.MOTOR_RIGHT, 0)
         self.load_defaults()
         
@@ -57,10 +57,8 @@ class Piggy(PiggyParent):
     ****************
     '''
     def alex(self):
-      print("This is for testing")
-      print("This is a second line")
       self.fwd()
-      time.sleep(100)
+      time.sleep(2)
       self.stop()
       
     def dance(self):

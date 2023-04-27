@@ -62,24 +62,37 @@ class Piggy(PiggyParent):
         time.sleep(2)
         self.stop()
         self.right()
-        time.sleep(0.90)
+        time.sleep(0.925)
         self.stop()
       self.scan()
       print(self.scan_data)
+      allowed_to_dance = True
+      for value in list:
+        if value in self.scan_data < 300:
+          allowed_to_dance = False
+        else:
+          allowed_to_dance = True
+      
 
   
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
-        
-        # lower-ordered example...
-        self.right(primary=50, counter=50)
-        time.sleep(2)
-        self.stop()
-
+        if self.allowed_to_dance = True:
+          self.right(primary=0, counter=50)
+          time.sleep(2)
+          self.stop()
+        elif self.allowed_to_dance = False:
+          print("It is not safe to dance!")
     def safe_to_dance(self):
         """ Does a 360 distance check and returns true if safe """
-        pass
+      self.scan()
+      print(self.scan_data)
+      self.allowed_to_dance = True
+      for value in self.scan_data:
+        if value < 300:
+          self.allowed_to_dance = False
+        
 
     def shake(self):
         """ Another example move """

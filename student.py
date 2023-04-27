@@ -64,16 +64,6 @@ class Piggy(PiggyParent):
         self.right()
         time.sleep(0.925)
         self.stop()
-      self.scan()
-      print(self.scan_data)
-      allowed_to_dance = True
-      for value in list:
-        if value in self.scan_data < 300:
-          allowed_to_dance = False
-        else:
-          allowed_to_dance = True
-      
-
   
     def dance(self):
         if self.allowed_to_dance is True:

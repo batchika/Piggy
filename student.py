@@ -84,7 +84,6 @@ class Piggy(PiggyParent):
           print("It is not safe to dance!")
           
     def safe_to_dance(self):
-        """ Does a 360 distance check and returns true if safe """
       self.scan()
       print(self.scan_data)
       self.allowed_to_dance = True
@@ -92,7 +91,6 @@ class Piggy(PiggyParent):
         if value < 300:
           self.allowed_to_dance = False
         
-
     def shake(self):
         """ Another example move """
         self.deg_fwd(720)

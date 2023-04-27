@@ -76,10 +76,10 @@ class Piggy(PiggyParent):
     def safe_to_dance(self):
       self.scan()
       print(self.scan_data)
-      self.allowed_to_dance = True
+      self.allowed_to_dance is True
       for value in self.scan_data:
         if value < 300:
-          self.allowed_to_dance = False
+          self.allowed_to_dance is False
         
     def shake(self):
         """ Another example move """

@@ -78,7 +78,7 @@ class Piggy(PiggyParent):
     def dance(self):
         """A higher-ordered algorithm to make your robot dance"""
         # TODO: check to see if it's safe before dancing
-        if self.allowed_to_dance = True:
+        if self.allowed_to_dance is True:
           self.right(primary=0, counter=50)
           time.sleep(2)
           self.stop()

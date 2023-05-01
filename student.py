@@ -78,7 +78,7 @@ class Piggy(PiggyParent):
       print(self.scan_data) 
       allowed_to_dance = True
       for value in self.scan_data:
-        if value < 300:
+        if self.scan_data[value] < 300:
           allowed_to_dance = False
           break 
       return allowed_to_dance

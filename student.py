@@ -75,7 +75,7 @@ class Piggy(PiggyParent):
           
     def safe_to_dance(self):
       self.scan()
-      print(self.scan_data)
+      print(self.scan_data) 
       allowed_to_dance = True
       for value in self.scan_data:
         if value < 300:

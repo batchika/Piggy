@@ -80,6 +80,7 @@ class Piggy(PiggyParent):
       for value in self.scan_data:
         if value < 300:
           allowed_to_dance = False
+          break 
       return allowed_to_dance
         
     def shake(self):
@@ -98,7 +99,7 @@ class Piggy(PiggyParent):
 
     def scan(self):
         """Sweep the servo and populate the scan_data dictionary"""
-        for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 3):
+        for angle in range(self.MIDPOINT-350, self.MIDPOINT+350, 10):
             self.servo(angle)
             self.scan_data[angle] = self.read_distance()
 

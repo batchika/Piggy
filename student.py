@@ -72,7 +72,6 @@ class Piggy(PiggyParent):
                 self.servo(ang)
                 time.sleep(.1)
                 if self.read_distance() < 250:
-                    self.back()
                     time.sleep(.3)
                     self.stop()
                     for x in range(3):

@@ -42,6 +42,7 @@ class Piggy(PiggyParent):
                 "c": ("Calibrate", self.calibrate),
                 "q": ("Quit", self.quit),
                 "a": ("Alex", self.alex)
+                "w": ("Wall", self.wall)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -64,6 +65,15 @@ class Piggy(PiggyParent):
         self.right()
         time.sleep(0.925)
         self.stop()
+        
+    def wall(self):
+      while True:
+        if self.read_distance() < 250:
+          time.sleep(1)
+          self.fwd()
+          self.sleep(1)
+          self.stop()
+
   
     def dance(self):
         if self.safe_to_dance() is True:

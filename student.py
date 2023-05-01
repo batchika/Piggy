@@ -70,6 +70,7 @@ class Piggy(PiggyParent):
           self.right(primary=500, counter=50)
           time.sleep(2)
           self.left(primary=500, counter=50)
+          time.sleep(2)
           self.stop()
         elif self.safe_to_dance() is False:
           print("It is not safe to dance!")

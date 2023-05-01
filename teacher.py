@@ -127,7 +127,7 @@ class PiggyParent(gopigo3.GoPiGo3):
 
     def fwd(self, left=50, right=50):
         """Blindly charges your robot forward at default power which needs to be configured in child class"""
-        if self.LEFT_DEFAULT and left == 50:
+        if self.LEFT_DEFAULT and left == 60:
             left = self.LEFT_DEFAULT
         if self.RIGHT_DEFAULT and right == 50:
             right = self.RIGHT_DEFAULT

@@ -68,11 +68,22 @@ class Piggy(PiggyParent):
         
     def wall(self):
       while True:
-        if self.read_distance() < 250:
-          time.sleep(1)
-          self.fwd()
-          self.sleep(1)
-          self.stop()
+            for ang in range(self.MIDPOINT-400, self.MIDPOINT+401, 100):
+                self.servo(ang)
+                time.sleep(.1)
+                if self.read_distance() < 250:
+                    self.back()
+                    time.sleep(.3)
+                    self.stop()
+                    for x in range(3):
+                        self.servo(self.MIDPOINT + 300)
+                        time.sleep(.15)
+                        self.servo(self.MIDPOINT - 300)
+                        time.sleep(.15)
+                    self.servo(self.MIDPOINT)
+                    self.fwd()
+                    time.sleep(.2)
+                    self.stop()
 
   
     def dance(self):

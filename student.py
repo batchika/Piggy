@@ -66,10 +66,10 @@ class Piggy(PiggyParent):
         turn = self.get_heading() - start_heading
         self.fwd(left = base_wheel_power - turn, right = base_wheel_power +turn)
       self.stop()
+      
     def alex(self):
       for x in range(4):
-        self.g_fwd()
-        time.sleep(2)
+        self.g_fwd(2)
         self.stop()
         self.right()
         time.sleep(0.925)
@@ -82,8 +82,7 @@ class Piggy(PiggyParent):
           self.left()
           time.sleep(1)
         else:
-          self.g_fwd()
-          time.sleep(1)
+          self.g_fwd(1)
           
     def box(self):
       while True:
@@ -91,13 +90,11 @@ class Piggy(PiggyParent):
           self.stop()
           self.left()
           time.sleep(0.5)
-          self.g_fwd()
-          time.sleep(3)
+          self.g_fwd(3)
           self.right()
           time.sleep(0.5)
         else:
-          self.g_fwd()
-          time.sleep(2)
+          self.g_fwd(2)
           
     def dance(self):
         if self.safe_to_dance() is True:

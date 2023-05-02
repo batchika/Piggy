@@ -58,9 +58,17 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
+    def g_fwd(self, amount):
+      base_wheel_power = 50
+      start_time = time.time()
+      start_heading = self.heading()
+      while time.time()< start_time + amount:
+        turn = self.get_heading() - start_heading
+        self.fwd(left = base_wheel_power - turn, right = base_wheel_power +turn)
+      self.stop()
     def alex(self):
       for x in range(4):
-        self.fwd()
+        self.g_fwd()
         time.sleep(2)
         self.stop()
         self.right()
@@ -74,7 +82,7 @@ class Piggy(PiggyParent):
           self.left()
           time.sleep(1)
         else:
-          self.fwd()
+          self.g_fwd()
           time.sleep(1)
           
     def box(self):
@@ -83,12 +91,12 @@ class Piggy(PiggyParent):
           self.stop()
           self.left()
           time.sleep(0.5)
-          self.fwd()
+          self.g_fwd()
           time.sleep(3)
           self.right()
           time.sleep(0.5)
         else:
-          self.fwd()
+          self.g_fwd()
           time.sleep(2)
           
     def dance(self):

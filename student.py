@@ -82,7 +82,7 @@ class Piggy(PiggyParent):
           self.left()
           time.sleep(2)
         else:
-          self.g_fwd(1)
+          self.g_fwd(3)
           
     def box(self):
       while True:

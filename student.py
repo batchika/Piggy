@@ -61,7 +61,7 @@ class Piggy(PiggyParent):
     def g_fwd(self, amount):
       base_wheel_power = 50
       start_time = time.time()
-      start_heading = self.heading()
+      start_heading = self.get_heading()
       while time.time()< start_time + amount:
         turn = self.get_heading() - start_heading
         self.fwd(left = base_wheel_power - turn, right = base_wheel_power +turn)

@@ -87,7 +87,7 @@ class Piggy(PiggyParent):
           
     def box(self):
       while True:
-        if self.read_distance() < 450:
+        if self.read_distance() < 350:
           self.stop()
           self.left()
           time.sleep(0.85)

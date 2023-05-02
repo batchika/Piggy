@@ -79,10 +79,9 @@ class Piggy(PiggyParent):
       while True:
         if self.read_distance() < 250:
           self.stop()
-          self.left()
-          time.sleep(2)
+          self.turn_by_degree(180)
         else:
-          self.g_fwd(1)
+          self.fwd(1)
           
     def box(self):
       while True:

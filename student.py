@@ -58,14 +58,14 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-    def g_fwd(self, amount):
+    '''def g_fwd(self, amount):
       base_wheel_power = 80
       start_time = time.time()
       start_heading = self.get_heading()
       while time.time()< start_time + amount:
         turn = self.get_heading() - start_heading
         self.fwd(left = base_wheel_power - turn, right = base_wheel_power +turn)
-      self.stop()
+      self.stop()''''
       
     def alex(self):
       for x in range(4):

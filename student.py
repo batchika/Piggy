@@ -72,7 +72,7 @@ class Piggy(PiggyParent):
         self.g_fwd(2)
         self.stop()
         self.right()
-        time.sleep(0.925)
+        time.sleep(0.85)
         self.stop()
         
     def wall(self):
@@ -82,7 +82,8 @@ class Piggy(PiggyParent):
           self.left()
           time.sleep(1.7)
         else:
-          self.g_fwd(3)
+          self.fwd()
+          time.sleep(3)
           
     def box(self):
       while True:
@@ -90,11 +91,13 @@ class Piggy(PiggyParent):
           self.stop()
           self.left()
           time.sleep(0.5)
-          self.g_fwd(3)
+          self.fwd()
+          time.sleep(2)
           self.right()
           time.sleep(0.5)
         else:
-          self.g_fwd(2)
+          self.fwd()
+          time.sleep(2)
           
     def dance(self):
         if self.safe_to_dance() is True:

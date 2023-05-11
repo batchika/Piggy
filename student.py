@@ -79,40 +79,32 @@ class Piggy(PiggyParent):
           
     def box(self):
       while True:
-        if self.read_distance() < 350:
-          self.servo(1000)
-          right_distance = self.read_distance()
-          self.servo(2000)
-          left_distance = self.read_distance()
-          if left_distance < right_distance:
-            if left_distance < 100:
-              self.left()
-              time.sleep(0.85)
-              self.fwd()
-              time.sleep(1)
-              self.right()
-              time.sleep(0.85)
-            if left_distance > 100:
-              self.left()
-              time.sleep(0.5)
-              self.fwd()
-              time.sleep(1)
-          elif left_distance > right_distance:
-            if right_distance < 100:
-              self.right()
-              time.sleep(0.85)
-              self.fwd()
-              time.sleep(1)
-              self.left()
-              time.sleep(0.85)
-            if right_distance > 100:
-              self.right()
-              time.sleep(0.5)
-              self.fwd()
-              time.sleep(1)
-        else:
+        self.servo(1000)
+        right_distance = self.read_distance()
+        self.servo(2000)
+        left_distance = self.read_distance()
+        self.servo(self.MIDPOINT)
+        center_distance = self.read_distance()
+        if left_distance == right_distance and left_distance == center_distance:
           self.fwd()
-          
+        if left_distance > right_distance and left_distance > center_distance:
+          self.left()
+          time.sleep(0.3)
+          self.fwd()
+          time.sleep(0.45)
+          self.right()
+          time.sleep(0.3)
+        if center_distance > right_distance and center_distance > left_distance:
+            self.fwd()
+        if left_distance < right_distance and right_distance > center_distance:
+          self.right()
+          time.sleep(0.3)
+          self.fwd()
+          time.sleep(0.45)
+          self.left()
+          time.sleep(0.3)
+
+  
     def dance(self):
         if self.safe_to_dance() is True:
           self.right(primary=500, counter=50)

@@ -85,8 +85,6 @@ class Piggy(PiggyParent):
         left_distance = self.read_distance()
         self.servo(self.MIDPOINT)
         center_distance = self.read_distance()
-        if left_distance == right_distance and left_distance == center_distance:
-          self.fwd()
         if left_distance > right_distance and left_distance > center_distance:
           self.left()
           time.sleep(0.3)
@@ -108,7 +106,8 @@ class Piggy(PiggyParent):
           time.sleep(0.45)
           self.left()
           time.sleep(0.3)
-
+        else:
+          self.fwd()
   
     def dance(self):
         if self.safe_to_dance() is True:

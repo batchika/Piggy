@@ -87,25 +87,13 @@ class Piggy(PiggyParent):
         center_distance = self.read_distance()
         if left_distance > right_distance and left_distance > center_distance:
           self.left()
-          time.sleep(0.3)
-          self.fwd()
           time.sleep(0.45)
-          self.right()
-          time.sleep(0.3)
         if center_distance > right_distance and center_distance > left_distance:
           self.left()
-          time.sleep(0.3)
-          self.fwd()
           time.sleep(0.45)
-          self.right()
-          time.sleep(0.3)
         if left_distance < right_distance and right_distance > center_distance:
           self.right()
-          time.sleep(0.3)
-          self.fwd()
           time.sleep(0.45)
-          self.left()
-          time.sleep(0.3)
         else:
           self.fwd()
   

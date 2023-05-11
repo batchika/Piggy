@@ -88,14 +88,14 @@ class Piggy(PiggyParent):
             self.left()
             time.sleep(0.85)
             self.fwd()
-            time.sleep(2)
+            time.sleep(1)
             self.right()
             time.sleep(0.85)
           else:
             self.right()
             time.sleep(0.85)
             self.fwd()
-            time.sleep(2)
+            time.sleep(1)
             self.left()
             time.sleep(0.85)
         else:

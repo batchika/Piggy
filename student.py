@@ -79,10 +79,10 @@ class Piggy(PiggyParent):
           
     def box(self):
       while True:
-        self.servo(self.MIDPOINT + 1000)
+        self.servo(self.MIDPOINT + 500)
         time.sleep(0.5)
         right_distance = self.read_distance()
-        self.servo(self.MIDPOINT - 1000)
+        self.servo(self.MIDPOINT - 500)
         time.sleep(0.5)
         left_distance = self.read_distance()
         self.servo(self.MIDPOINT)

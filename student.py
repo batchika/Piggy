@@ -106,7 +106,7 @@ class Piggy(PiggyParent):
           self.sleep(3)
           self.right()
           time.sleep(0.15)
-        elif left_distance > right_distance and right_distance > center_distance and right_distance < 300:
+        elif left_distance > right_distance and right_distance < center_distance and right_distance < 300:
           print("case 4")
           self.right()
           time.sleep(0.30)

@@ -94,13 +94,13 @@ class Piggy(PiggyParent):
           print("Case 1")
           self.fwd(40,80)
           time.sleep(2.75)
-          ''''self.fwd(80,40)
-          time.sleep(2.75)''''
+          '''self.fwd(80,40)
+          time.sleep(2.75)'''
         elif center_distance < right_distance and center_distance < left_distance and center_distance < 400:
           print("case 2")
           self.fwd(80,40)
           time.sleep(2.75)
-         '''' self.fwd(40,80)
+         ''' self.fwd(40,80)
           time.sleep(2.75)'''
         elif left_distance > right_distance and right_distance < center_distance and right_distance < 400:
           print("case 4")

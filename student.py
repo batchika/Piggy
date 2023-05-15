@@ -90,24 +90,24 @@ class Piggy(PiggyParent):
         time.sleep(0.3)
         center_distance = self.read_distance()
         
-        if left_distance < right_distance and left_distance < center_distance and left_distance < 500:
+        if left_distance < right_distance and left_distance < center_distance and left_distance < 400:
           print("Case 1")
           self.fwd(40,80)
-          time.sleep(2)
+          time.sleep(3)
           self.fwd(80,40)
-          time.sleep(2)
-        elif center_distance < right_distance and center_distance < left_distance and center_distance < 500:
+          time.sleep(3)
+        elif center_distance < right_distance and center_distance < left_distance and center_distance < 400:
           print("case 2")
           self.fwd(40,80)
-          time.sleep(2)
+          time.sleep(3)
           self.fwd(80,40)
-          time.sleep(2)
-        elif left_distance > right_distance and right_distance < center_distance and right_distance < 500:
+          time.sleep(3)
+        elif left_distance > right_distance and right_distance < center_distance and right_distance < 400:
           print("case 4")
           self.fwd(80,40)
-          time.sleep(2)
+          time.sleep(3)
           self.fwd(40,80)
-          time.sleep(2)
+          time.sleep(3)
         else:
           print("case 5")
           self.fwd(40,40)

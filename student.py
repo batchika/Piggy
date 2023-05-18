@@ -83,7 +83,7 @@ class Piggy(PiggyParent):
           self.turn_by_deg(-85)
         else:
           print("case 5")
-          self.fwd
+          self.fwd()
     def alex(self):
       for x in range(4):
         self.g_fwd(2)

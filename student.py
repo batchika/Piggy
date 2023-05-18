@@ -77,7 +77,7 @@ class Piggy(PiggyParent):
   
         elif center_distance < right_distance and center_distance < left_distance and center_distance < 200:
           print("case 2")
-          self.turn_by_deg(85):
+          self.turn_by_deg(85)
         elif left_distance > right_distance and right_distance < center_distance and right_distance < 200:
           print("case 4")
           self.turn_by_deg(-85)

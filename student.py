@@ -70,9 +70,9 @@ class Piggy(PiggyParent):
           self.servo(self.MIDPOINT - 1000)
           time.sleep(0.3)
           left_distance = self.read_distance()
-          if left_distance < right_distance and left_distance < 100:
+          if left_distance < right_distance:
             self.turn_by_deg(-85)
-          elif left_distance > right_distance and right_distance < 100:
+          elif left_distance > right_distance:
             self.turn_by_deg(85)
         else:
           print("case 5")

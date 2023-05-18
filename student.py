@@ -63,6 +63,7 @@ class Piggy(PiggyParent):
     def maze(self):
       while True:
         if self.read_distance() < 350:
+          self.stop()
           self.servo(self.MIDPOINT + 1000)
           time.sleep(0.3)
           right_distance = self.read_distance()

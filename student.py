@@ -62,16 +62,13 @@ class Piggy(PiggyParent):
 
     def maze(self):
       while True:
-        self.servo(self.MIDPOINT + 1000)
-        time.sleep(0.3)
-        right_distance = self.read_distance()
-        self.servo(self.MIDPOINT - 1000)
-        time.sleep(0.3)
-        left_distance = self.read_distance()
-        self.servo(self.MIDPOINT)
-        time.sleep(0.3)
-        center_distance = self.read_distance()
         if self.read_distance() < 350:
+          self.servo(self.MIDPOINT + 1000)
+          time.sleep(0.3)
+          right_distance = self.read_distance()
+          self.servo(self.MIDPOINT - 1000)
+          time.sleep(0.3)
+          left_distance = self.read_distance()
           if left_distance < right_distance and left_distance < center_distance and left_distance < 100:
             print("Case 1")
             self.turn_by_deg(-85)
@@ -85,6 +82,8 @@ class Piggy(PiggyParent):
         else:
           print("case 5")
           self.fwd()
+
+  
     def alex(self):
       for x in range(4):
         self.g_fwd(2)
@@ -105,7 +104,6 @@ class Piggy(PiggyParent):
           
     def box(self):
       while True:
-        
         self.servo(self.MIDPOINT + 500)
         time.sleep(0.3)
         right_distance = self.read_distance()

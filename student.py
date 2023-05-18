@@ -43,7 +43,8 @@ class Piggy(PiggyParent):
                 "q": ("Quit", self.quit),
                 "a": ("Alex", self.alex),
                 "w": ("Wall", self.wall),
-                "b": ("Box", self.box)
+                "b": ("Box", self.box),
+                "m": ("Box", self.maze)
                 }
         # loop and print the menu...
         for key in sorted(menu.keys()):
@@ -58,7 +59,31 @@ class Piggy(PiggyParent):
     STUDENT PROJECTS
     ****************
     '''
-      
+
+    def maze(self):
+      while True:
+        self.servo(self.MIDPOINT + 500)
+        time.sleep(0.3)
+        right_distance = self.read_distance()
+        self.servo(self.MIDPOINT - 500)
+        time.sleep(0.3)
+        left_distance = self.read_distance()
+        self.servo(self.MIDPOINT)
+        time.sleep(0.3)
+        center_distance = self.read_distance()
+        if left_distance < right_distance and left_distance < center_distance and left_distance < 200:
+          print("Case 1")
+          self.turn_by_deg(85)
+  
+        elif center_distance < right_distance and center_distance < left_distance and center_distance < 200:
+          print("case 2")
+          self.turn_by_deg(85):
+        elif left_distance > right_distance and right_distance < center_distance and right_distance < 200:
+          print("case 4")
+          self.turn_by_deg(-85)
+        else:
+          print("case 5")
+          self.fwd
     def alex(self):
       for x in range(4):
         self.g_fwd(2)
